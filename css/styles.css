@@ -39,22 +39,75 @@
     0 4px 6px -2px rgba(0, 0, 0, 0.05);
   --level-4: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
     0 10px 10px -5px rgba(0, 0, 0, 0.04);
+
+  /* positioning */
+  --containerPadding: 2.5%;
+  --header-height: 3rem;
 }
 
 /* From Typescale */
 html {
-  font-size: var(--baseFontSize);
-} /*18px*/
+  font-size: var(--baseFontSize); /*18px*/
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
 
 body {
   font-family: var(--bodyFont);
   font-weight: 400;
   line-height: 1.65;
-  padding-bottom: 300px;
   background: var(--background);
   color: var(--textColor);
 }
 
+header {
+  --header-background: var(--blue);
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  color: var(--white);
+  height: var(--header-height);
+  background-color: var(--header-background);
+  box-shadow: var(--level-2);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 var(--containerPadding);
+}
+
+header nav a {
+  color: var(--white);
+  text-decoration: none;
+}
+
+header nav a + a {
+  margin-left: 10px;
+}
+
+footer {
+  --footer-text-color: var(--grey);
+  color: var(--footer-text-color);
+  background: var(--black);
+  padding: 2rem var(--containerPadding);
+  text-align: center;
+}
+
+footer a {
+  color: var(--footer-text-color);
+  text-decoration: none;
+}
+
+footer p {
+  margin-bottom: none;
+  max-width: none;
+  text-align: center;
+}
 p {
   margin-bottom: 1.15rem;
   max-width: 40em;
@@ -177,8 +230,7 @@ button.cancel {
 }
 
 .layout {
-  margin: 0 auto;
-  width: 95%;
+  padding: calc(3rem + var(--header-height)) var(--containerPadding);
 }
 
 .grid {
@@ -211,4 +263,9 @@ button.cancel {
   .flex {
     display: flex;
   }
+}
+
+.logo {
+  font-size: var(--baseFontSize);
+  margin: 0;
 }
