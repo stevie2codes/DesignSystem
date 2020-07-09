@@ -1,8 +1,9 @@
 :root {
   --black: #222;
+  --white: #f2f2f2;
 }
 
 body {
   background: var(--black);
-  color: #f2f2f2;
+  color: var(--white);
 }
