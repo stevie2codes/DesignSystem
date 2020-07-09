@@ -27,7 +27,8 @@
 
   <!-- Add your site or application content here -->
   <h1>Design Sytem Starter</h1>
-  <p>Messenger bag mustache microdosing meh meditation master cleanse. Cold-pressed mixtape forage, kombucha keytar
+  <p>Messenger bag <a href="#">mustache microdosing</a> meh meditation master cleanse. Cold-pressed mixtape forage,
+    kombucha keytar
     hexagon salvia before they sold out stumptown PBR&B cred crucifix selvage VHS. Biodiesel meggings gluten-free cronut
     selvage. Truffaut hashtag occupy flannel photo booth four dollar toast. Literally shoreditch tumeric farm-to-table,
     small batch mixtape plaid vape seitan fanny pack pitchfork knausgaard. Williamsburg shabby chic intelligentsia,
@@ -36,7 +37,7 @@
 
   <h2>Design Sytem Starter</h2>
   <blockquote>Messenger bag mustache microdosing meh<strong> Cold-pressed mixtape</strong> meditation master cleanse.
-    Cold-pressed mixtape forage, kombucha
+    Cold-pressed mixtape forage,<a href="">kombucha</a>
     keytar
     hexagon salvia before they sold out stumptown PBR&B cred crucifix selvage VHS. Biodiesel meggings gluten-free cronut
     selvage. Truffaut hashtag occupy flannel photo booth four dollar toast. Literally shoreditch tumeric farm-to-table,
@@ -65,16 +66,39 @@
   </ul>
 
   <form>
-    <div><label for="textfeild">Text</label><input id="text" type="text"></div>
-    <div><label for="textfeild">number</label><input id="number" type="number"></div>
-    <div><label for="select">select</label><select id="select" type="select">
+    <div>
+      <label for="textfeild">Text</label>
+      <input id="text" placeholder="Stephen webb" type="text">
+    </div>
+    <div>
+      <label for="textfeild">Number</label>
+      <input id="number" type="number">
+    </div>
+    <div>
+      <label for="email">Email</label>
+      <input id="email" type="text">
+    </div>
+    <div>
+      <label for="textarea">Textarea</label>
+      <textarea id="textarea"></textarea>
+    </div>
+    <div>
+      <label for="select">Select</label>
+      <select id="select" type="select">
         <option value="first">first</option>
         <option value="second">Second</option>
         <option value="third">third</option>
-      </select></div>
+      </select>
+    </div>
   </form>
 
-  <button>submit</button> <button>cancel</button>
+  <button>Submit</button>
+  <button class="cancel">Cancel</button>
+  <button disabled>Disabled</button>
+  <button>Button with long text</button>
+  <button>Button &xrarr;</button>
+  <br>
+  <button class="small">Submit</button>
 
   <script src="js/vendor/modernizr-3.11.2.min.js"></script>
   <script src="js/plugins.js"></script>
