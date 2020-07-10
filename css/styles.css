@@ -8,6 +8,7 @@
   --red: #ff5964;
   --yellow: #ffe74c;
   --grey: #bfbfbf;
+  --darkBlue: #122a33;
 
   /* Define the colors intentions */
   --background: var(--white);
@@ -19,6 +20,10 @@
 
   /* style */
   --line: 1px solid var(--lineColor);
+  --cardBg: #fff;
+  --border-radius: 10px;
+  --header-background: var(--blue);
+  --footerBackground: var(--black);
 
   /* Type */
   --headingFont: "Oswald", sans-serif;
@@ -66,7 +71,6 @@ body {
 }
 
 header {
-  --header-background: var(--blue);
   position: fixed;
   left: 0;
   top: 0;
@@ -93,7 +97,7 @@ header nav a + a {
 footer {
   --footer-text-color: var(--grey);
   color: var(--footer-text-color);
-  background: var(--black);
+  background: var(--footerBackground);
   padding: 2rem var(--containerPadding);
   text-align: center;
 }
@@ -115,7 +119,7 @@ p {
 
 p a,
 blockquote a {
-  color: var(--black);
+  color: var(--textColor);
   text-decoration: none;
   border-bottom: 2px solid var(--success);
 }
@@ -159,13 +163,8 @@ small,
 
 /* end typescale */
 
-.dark {
-  --background: var(--black);
-  --textColor: var(--white);
-}
-
 blockquote {
-  background-color: var(--grey);
+  background-color: var(--cardBg);
   margin: 10px;
   padding: 2em;
   box-shadow: var(--level-3);
@@ -243,6 +242,12 @@ button.cancel {
   --gridCols: 3;
 }
 
+.split {
+  display: grid;
+  grid-template-columns: 33% 67%;
+  grid-gap: 20px;
+}
+
 .flex {
   --justifyContent: space-between;
   display: block;
@@ -268,4 +273,26 @@ button.cancel {
 .logo {
   font-size: var(--baseFontSize);
   margin: 0;
+}
+
+.card {
+  background-color: var(--cardBg);
+  padding: 2em;
+  box-shadow: var(--level-3);
+  border-radius: var(--border-radius);
+}
+
+.card > *:first-child {
+  margin-top: 0;
+}
+.card > *:last-child {
+  margin-bottom: 0;
+}
+
+.dark {
+  --background: var(--black);
+  --textColor: var(--white);
+  --header-background: var(--darkBlue);
+  --cardBg: var(--darkBlue);
+  --footerBackground: var(--darkBlue);
 }
